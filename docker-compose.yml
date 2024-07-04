@@ -1,0 +1,22 @@
+version: '2.17.2'
+services:
+  mysql:
+    image: mysql:latest
+    restart: on-failure
+    environment:
+      MYSQL_ROOT_PASSWORD: Qwerty1234!
+      MYSQL_USER: alenchha
+      MYSQL_PASSWORD: Qwerty1234!
+    networks:
+      - python-network
+  bot:
+    build: .
+    command: sh -c "python makedb.py && python -m bot"
+    restart: always
+    depends_on:
+      - mysql
+    networks:
+      - python-network
+networks:
+  python-network:
+    driver: bridge
