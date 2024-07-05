@@ -1,7 +1,7 @@
 import asyncio
 import logging
 import sys
-from aiogram import Bot, Dispatcher, types, utils, Router, F
+from aiogram import Bot, Dispatcher, Router, F
 from aiogram.filters.command import Command
 from aiogram.filters.state import StatesGroup, State
 from aiogram.fsm.context import FSMContext
