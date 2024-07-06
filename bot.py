@@ -23,7 +23,7 @@ class Form(StatesGroup):
     emp = State()
 
 
-@form_router.message(Command("search"))
+@form_router.message(Command("start"))
 async def command_start(message: Message, state: FSMContext) -> None:
     await state.set_state(Form.keyword)
     await message.answer(
