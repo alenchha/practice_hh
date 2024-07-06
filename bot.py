@@ -144,7 +144,7 @@ async def process_emp(message: Message, state: FSMContext) -> None:
             company_name = vacancy.get("employer", {}).get("name")
             ac = vacancy.get("employer", {}).get("accredited_it_employer")
             await message.answer(
-                f"Вакансия: {vacancy_title}\nКомпания: {company_name}\nСсылка: {vacancy_url}\nЕсть ли IT аккредетация: {'да' if ac else 'нет'}\n",
+                f"Вакансия: {vacancy_title}\nКомпания: {company_name}\nСсылка: {vacancy_url}\nЕсть ли IT аккредитация: {'да' if ac else 'нет'}\n",
                 reply_markup=ReplyKeyboardRemove(),
             )
 
