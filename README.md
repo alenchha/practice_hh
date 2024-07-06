@@ -1,5 +1,3 @@
-Ссылка на Telegram Бот: https://t.me/superhhrubot
-
 
 Инструкция пользования 
 1) Откройте Docker Desktop;
